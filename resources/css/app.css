@@ -1,3 +1,40 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+th {
+    @apply py-2 border-b border-slate-500;
+}
+
+td {
+    @apply text-center py-2;
+}
+
+#modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 9999;
+}
+
+#modal {
+    position: fixed;
+    width: 90%;
+    top: 55%;
+    left: 50%;
+    text-align: center;
+    background-color: #fafafa;
+    box-sizing: border-box;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: all 300ms ease-in-out;
+}
+
+#modalOverlay.modal-open #modal {
+    opacity: 1;
+    top: 50%;
+}

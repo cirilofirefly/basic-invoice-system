@@ -1,3 +1,3 @@
 <x-app-layout>
-    Home
+    @extends('invoice.index')
 </x-app-layout>
