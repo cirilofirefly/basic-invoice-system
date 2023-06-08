@@ -4,9 +4,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{ config('app.name') }}</title>
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/js/invoices.js'])
 </head>
-<body class="bg-slate-200 flex items-center justify-center">
+<body class="bg-slate-200 flex items-center justify-center shadow-md">
     @auth
         <div class="fixed top-0 w-full px-4 py-4 bg-slate-50 flex justify-between items-center">
             <h1 class="text-lg font-semibold uppercase">Basic Invoice System</h1>

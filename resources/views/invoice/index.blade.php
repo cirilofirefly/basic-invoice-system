@@ -5,8 +5,8 @@
             Add New Invoice
         </button>
     </div>
-    <div class="w-full px-4">
-        <table class="w-full">
+    <div class="w-full px-4 overflow-y-auto">
+        <table class="w-full " id="invoiceTbl">
             <thead>
                 <th>Invoice Number</th>
                 <th>Invoice Date</th>
@@ -16,14 +16,8 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>120301230123</td>
-                    <td>120301230123</td>
-                    <td>120301230123</td>
-                    <td>120301230123</td>
-                    <td class="flex items-center justify-center space-x-3">
-                        <button id="view-invoice" class="inline-block bg-green-400 px-4 py-1 rounded-md text-white">View</button>
-                        <button class="inline-block bg-indigo-500 px-5 py-1 rounded-md text-white">Edit</button>
-                        <button class="inline-block bg-red-500 px-2 py-1 rounded-md text-white">Delete</button>
+                    <td colspan="6">
+                        <p class="text-center my-4">No Records</p>
                     </td>
                 </tr>
             </tbody>
