@@ -25,12 +25,19 @@ class InvoiceRequest extends FormRequest
     {
         $rules = $this->method('post') ? 
             [
-                'invoice_number' => [],
-                'invoice_number' => [],
-                'invoice_number' => [],
+                'invoice_number'    => ['required'],
+                'invoice_date'      => ['required', 'date'],
+                'customer_name'     => ['required', 'string'],
+                'product_name.*'    => ['required', 'string'],
+                'total_amount'      => ['required', 'string'],
+
             ] : 
             [
-                
+                'invoice_number'    => ['required'],
+                'invoice_date'      => ['required', 'date'],
+                'customer_name'     => ['required', 'string'],
+                'product_name.*'    => ['required', 'string'],
+                'total_amount'      => ['required', 'string'],
             ];
 
         return $rules;
@@ -39,10 +46,9 @@ class InvoiceRequest extends FormRequest
     public function messages(): array
     {
         return [
-            'email.required'    => 'Please enter your email.',
-            'email.exists'      => 'Email does not exists.',
-            'email.email'       => 'Email must be vaild.',
-            'password.required' => 'Please enter your password.',
+            'invoice_number.required' => 'Invoice Number is required',
+            'invoice_date.required'   => 'Invoice Date is required',
+            'customer_name.required'  => 'Customer Name is required',
         ];
     }
 }

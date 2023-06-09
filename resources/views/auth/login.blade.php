@@ -1,4 +1,5 @@
-<x-app-layout>
+@extends('layouts.app')
+@section('content')
     <form class="w-1/4 bg-slate-50 flex flex-col shadow-md rounded-md p-4" method="POST" action="{{ route('auth.login') }}">
         <h1 class="text-2xl font-bold mb-2 text-center">Login</h1>
         <div class="flex flex-col space-y-2 mb-2">
@@ -23,4 +24,4 @@
         </button>
         @csrf
     </form>
-</x-app-layout>
+@endsection

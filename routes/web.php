@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\InvoiceController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
@@ -25,6 +26,5 @@ Route::middleware('guest')->group(function() {
 Route::middleware('auth')->group(function() {
     Route::get('auth/logout', [LoginController::class, 'logout'])->name('auth.logout');
     Route::view('/', 'home')->name('home');
-
-
+    Route::resource('invoices', InvoiceController::class);
 });
